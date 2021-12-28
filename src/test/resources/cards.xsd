@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="old_cards"
+        xmlns:tns="old_cards"
+        elementFormDefault="qualified">
+
+    <element name="old_cards">
+        <complexType>
+            <choice maxOccurs="unbounded">
+                <element name="simple_old_card" type="tns:Simple_old_card"/>
+                <element name="congratulatory_old_card" type="tns:Congratulatory_old_card"/>
+            </choice>
+        </complexType>
+    </element>
+
+    <complexType name="old_card">
+        <sequence>
+            <element name="type" type="string"/>
+            <element name="thema" type="string"/>
+            <element name="country" type="string"/>
+            <element name="year" type="positiveInteger"/>
+        </sequence>
+        <attribute name="id" type="positiveInteger" use="required"/>
+        <attribute name="author" type="string" use="optional"/>
+    </complexType>
+
+    <complexType name="Congratulatory_old_card">
+        <complexContent>
+            <extension base="tns:old_card">
+                <sequence>
+                    <element name="direction" type="tns:Direction"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <simpleType name="Direction">
+        <restriction base="string">
+            <enumeration value="NEW_YEAR"/>
+            <enumeration value="BIRTHDAY"/>
+            <enumeration value="CHRISTMAS"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="Simple_old_card">
+        <complexContent>
+            <extension base="tns:old_card">
+                <sequence>
+                    <element name="message" type="string"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+</schema>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<old_cards xmlns = "old_cards">
+    <congratulatory_old_card id="1" author="Mikola">
+        <type>congratulatory</type>
+        <thema>nature</thema>
+        <country>Belarus</country>
+        <year>2002</year>
+        <direction>NEW_YEAR</direction>
+    </congratulatory_old_card>
+    <congratulatory_old_card id="2" author="Alex">
+        <type>congratulatory</type>
+        <thema>people</thema>
+        <country>USA</country>
+        <year>2001</year>
+        <direction>BIRTHDAY</direction>
+    </congratulatory_old_card>
+    <simple_old_card id="3" author="Peter">
+        <type>simple</type>
+        <thema>nature</thema>
+        <country>USA</country>
+        <year>2000</year>
+        <message>for beautiful girl</message>
+    </simple_old_card>
+    <simple_old_card id="4" author="Mike">
+        <type>simple</type>
+        <thema>sport</thema>
+        <country>Poland</country>
+        <year>2015</year>
+        <message>best wishes</message>
+    </simple_old_card>
+
+</old_cards>
+
